@@ -40,14 +40,14 @@ jobs:
       - name: Prepare Release APK Files
         run: |
           mkdir -p release-assets
-          cp app/build/outputs/apk/release/app-release.apk release-assets/GeoTasks-Reminder.apk
-          cp app/build/outputs/apk/debug/app-debug.apk release-assets/GeoTasks-Reminder-debug.apk
+          cp app/build/outputs/apk/release/app-release.apk release-assets/GeoReminder.apk
+          cp app/build/outputs/apk/debug/app-debug.apk release-assets/GeoReminder-debug.apk
           ls -lh release-assets/
 
       - name: Upload APK as Workflow Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: GeoTasks-Reminder-APK
+          name: GeoReminder-APK
           path: release-assets/*.apk
 
       - name: Determine Release Tag Name
@@ -64,19 +64,19 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.tag_info.outputs.tag_name }}
-          name: "GeoTasks Reminder ${{ steps.tag_info.outputs.tag_name }}"
+          name: "GeoReminder ${{ steps.tag_info.outputs.tag_name }}"
           body: |
-            ## 📍 GeoTasks – Standort-Erinnerungen (${{ steps.tag_info.outputs.tag_name }})
+            ## 📍 GeoReminder – Standort-Erinnerungen (${{ steps.tag_info.outputs.tag_name }})
 
             Automatisch erstellter APK-Release aus Commit `${{ github.sha }}`.
 
             ### 📲 Installation auf Android
-            1. Lade unten unter **Assets** die Datei **`GeoTasks-Reminder.apk`** herunter.
+            1. Lade unten unter **Assets** die Datei **`GeoReminder.apk`** herunter.
             2. Öffne die heruntergeladene APK-Datei auf deinem Android-Smartphone und bestätige die Installation.
             3. Erlaube beim ersten Start den Standortzugriff (**„Immer zulassen“**) sowie **Benachrichtigungen**, damit die Popup-Notifications beim Betreten deiner Standorte zuverlässig ausgelöst werden.
           files: |
-            release-assets/GeoTasks-Reminder.apk
-            release-assets/GeoTasks-Reminder-debug.apk
+            release-assets/GeoReminder.apk
+            release-assets/GeoReminder-debug.apk
           draft: false
           prerelease: false
         env:

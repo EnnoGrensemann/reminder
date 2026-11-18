@@ -35,7 +35,7 @@ import com.ennogrensemann.reminder.ui.ReminderViewModel
 import com.ennogrensemann.reminder.ui.components.AddEditReminderSheet
 import com.ennogrensemann.reminder.ui.screens.FavoritesScreen
 import com.ennogrensemann.reminder.ui.screens.HomeScreen
-import com.ennogrensemann.reminder.ui.theme.GeoTasksTheme
+import com.ennogrensemann.reminder.ui.theme.GeoReminderTheme
 
 class MainActivity : ComponentActivity() {
 
@@ -43,15 +43,15 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            GeoTasksTheme {
-                GeoTasksApp()
+            GeoReminderTheme {
+                GeoReminderApp()
             }
         }
     }
 }
 
 @Composable
-fun GeoTasksApp(viewModel: ReminderViewModel = viewModel()) {
+fun GeoReminderApp(viewModel: ReminderViewModel = viewModel()) {
     val context = LocalContext.current
     val lifecycleOwner = LocalLifecycleOwner.current
 
@@ -164,7 +164,7 @@ fun GeoTasksApp(viewModel: ReminderViewModel = viewModel()) {
             title = { Text("Hintergrund-Standort ('Immer zulassen')") },
             text = {
                 Text(
-                    "Damit GeoTasks auch dann ein Popup-Banner anzeigt, wenn dein Handy in der Tasche ist oder die App geschlossen wurde, wähle im nächsten Schritt bitte 'Immer zulassen' für den Standort."
+                    "Damit GeoReminder auch dann ein Popup-Banner anzeigt, wenn dein Handy in der Tasche ist oder die App geschlossen wurde, wähle im nächsten Schritt bitte 'Immer zulassen' für den Standort."
                 )
             },
             confirmButton = {

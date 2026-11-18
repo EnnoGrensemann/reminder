@@ -98,7 +98,7 @@ fun HomeScreen(
                         )
                         Spacer(modifier = Modifier.width(10.dp))
                         Text(
-                            text = "GeoTasks",
+                            text = "GeoReminder",
                             style = MaterialTheme.typography.headlineSmall,
                             fontWeight = FontWeight.Bold
                         )
@@ -160,7 +160,7 @@ fun HomeScreen(
                             }
                             Spacer(modifier = Modifier.height(6.dp))
                             Text(
-                                text = "Damit dich GeoTasks automatisch per Popup benachrichtigt, sobald du in die Nähe eines Standorts kommst, erlaube bitte den Standortzugriff ('Immer zulassen') und Benachrichtigungen.",
+                                text = "Damit dich GeoReminder automatisch per Popup benachrichtigt, sobald du in die Nähe eines Standorts kommst, erlaube bitte den Standortzugriff ('Immer zulassen') und Benachrichtigungen.",
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onErrorContainer
                             )

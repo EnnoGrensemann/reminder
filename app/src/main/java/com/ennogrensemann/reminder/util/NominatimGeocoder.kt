@@ -17,7 +17,7 @@ data class GeocodingResult(
 
 object NominatimGeocoder {
 
-    private const val USER_AGENT = "GeoTasksReminderApp/1.0 (https://github.com/EnnoGrensemann/reminder)"
+    private const val USER_AGENT = "GeoReminderApp/1.0 (https://github.com/EnnoGrensemann/reminder)"
 
     suspend fun searchAddress(query: String): List<GeocodingResult> = withContext(Dispatchers.IO) {
         if (query.isBlank()) return@withContext emptyList()

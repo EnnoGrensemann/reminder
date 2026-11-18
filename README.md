@@ -1,4 +1,4 @@
-# 📍 GeoTasks – Standort-Erinnerungen (Kotlin / Android)
+# 📍 GeoReminder – Standort-Erinnerungen (Kotlin / Android)
 
 Eine übersichtliche Android-App im Stil von **Google Tasks**, mit der du dir Erinnerungen nach **Standort** setzen kannst. Sobald du in die Nähe des gewählten Ortes kommst, erscheint automatisch eine **Popup-Notification** mit deiner Erinnerung.
 
@@ -21,7 +21,7 @@ Eine übersichtliche Android-App im Stil von **Google Tasks**, mit der du dir Er
 Die fertige APK wird bei jedem Push auf `main` vollautomatisch über **GitHub Actions** gebaut und unter [**Releases**](../../releases) veröffentlicht:
 
 1. Öffne den Bereich [**Releases**](../../releases) hier im Repository.
-2. Lade die Datei **`GeoTasks-Reminder.apk`** aus dem neuesten Release herunter und installiere sie auf deinem Android-Gerät.
+2. Lade die Datei **`GeoReminder.apk`** aus dem neuesten Release herunter und installiere sie auf deinem Android-Gerät.
 3. Erlaube beim Start den Standortzugriff (**„Immer zulassen“**) sowie **Benachrichtigungen**.
 
 ## 🛠️ Tech-Stack
